@@ -1,0 +1,66 @@
+/* PortfolioPage.css */
+
+.portfolio-tabs {
+    display: flex; gap: 4px; margin-bottom: 24px;
+    background: var(--bg-secondary); border-radius: 12px; padding: 4px;
+    overflow-x: auto;
+}
+
+.portfolio-tab {
+    padding: 8px 20px; border: none; background: transparent;
+    color: var(--text-secondary); font-size: 14px; font-weight: 600;
+    cursor: pointer; border-radius: 10px; transition: all 0.2s;
+    white-space: nowrap; font-family: 'Inter', sans-serif;
+}
+
+.portfolio-tab:hover { color: var(--text-primary); }
+
+.portfolio-tab.active {
+    background: var(--accent-gradient); color: white;
+    box-shadow: 0 2px 8px var(--accent-glow);
+}
+
+.port-summary { margin-bottom: 24px; }
+
+.port-assets-card { margin-bottom: 24px; }
+
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+/* Rebalancing results */
+.rebalance-card { margin-bottom: 24px; }
+
+.rebalance-summary {
+    display: flex; gap: 8px; margin-bottom: 16px;
+}
+
+.rebalance-list { display: flex; flex-direction: column; gap: 12px; }
+
+.rebalance-item {
+    padding: 16px; border-radius: var(--radius-md);
+    border: 1px solid var(--border-subtle);
+    background: var(--bg-primary);
+}
+
+.rebalance-item.action-buy { border-left: 3px solid var(--success); }
+.rebalance-item.action-sell { border-left: 3px solid var(--danger); }
+.rebalance-item.action-hold { border-left: 3px solid var(--text-muted); }
+
+.rebalance-action {
+    display: flex; align-items: center; gap: 12px; margin-bottom: 8px;
+    flex-wrap: wrap;
+}
+
+.action-badge {
+    padding: 3px 10px; border-radius: 6px; font-size: 11px;
+    font-weight: 700; letter-spacing: 0.5px;
+}
+
+.action-badge.buy { background: var(--success-bg); color: var(--success); }
+.action-badge.sell { background: var(--danger-bg); color: var(--danger); }
+.action-badge.hold { background: rgba(100,116,139,0.15); color: var(--text-muted); }
+
+.rebalance-amount { font-weight: 700; color: var(--accent-primary); }
+
+.rebalance-reason { font-size: 13px; color: var(--text-secondary); line-height: 1.5; }
+
+@media (max-width: 768px) { .form-row { grid-template-columns: 1fr; } }

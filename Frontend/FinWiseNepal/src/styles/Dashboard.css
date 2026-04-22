@@ -1,0 +1,221 @@
+/* Dashboard.css — Overhauled dashboard styling */
+
+.dash-welcome {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 28px;
+}
+
+.dash-greeting {
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.dash-subtitle {
+    color: var(--text-secondary);
+    font-size: 15px;
+    margin-top: 4px;
+}
+
+/* NEPSE Banner */
+.dash-nepse-banner {
+    background: linear-gradient(135deg, rgba(99,102,241,0.12), rgba(139,92,246,0.08));
+    border: 1px solid rgba(99,102,241,0.2);
+    border-radius: var(--radius-lg);
+    padding: 24px 28px;
+    margin-bottom: 24px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dash-nepse-banner:hover {
+    border-color: rgba(99,102,241,0.4);
+    box-shadow: 0 8px 40px rgba(99,102,241,0.12);
+    transform: translateY(-1px);
+}
+
+.nepse-main {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.nepse-badge {
+    background: var(--accent-gradient);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.nepse-price {
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.nepse-change {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.nepse-stats-row {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+
+.nepse-mini-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.mini-label {
+    font-size: 11px;
+    color: var(--text-muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.nepse-mini-stat span:last-child {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Stats Grid */
+.dash-stats-grid {
+    margin-bottom: 24px;
+}
+
+.dash-stat-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dash-stat-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent-primary);
+}
+
+.dash-stat-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    flex-shrink: 0;
+}
+
+.dash-stat-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.dash-stat-info .stat-label {
+    font-size: 12px;
+    color: var(--text-muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.dash-stat-info .stat-value {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -0.3px;
+}
+
+.stat-change {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* Quick Actions Grid */
+.dash-actions-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.dash-action-card {
+    cursor: pointer;
+    text-align: center;
+    padding: 28px 20px;
+    transition: all 0.3s ease;
+}
+
+.dash-action-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent-primary);
+    box-shadow: 0 12px 40px rgba(99,102,241,0.15);
+}
+
+.action-emoji {
+    font-size: 36px;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.dash-action-card h3 {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.dash-action-card p {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.4;
+}
+
+/* Goals Card */
+.dash-goals-card {
+    margin-bottom: 24px;
+}
+
+.dash-goals-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.goal-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.goal-stat-val {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.goal-stat-label {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+@media (max-width: 1200px) {
+    .dash-actions-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+    .dash-welcome { flex-direction: column; gap: 16px; align-items: flex-start; }
+    .dash-actions-grid { grid-template-columns: 1fr; }
+    .dash-goals-stats { grid-template-columns: 1fr; }
+    .nepse-stats-row { gap: 16px; }
+}

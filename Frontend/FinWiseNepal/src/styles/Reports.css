@@ -1,0 +1,74 @@
+/* Reports.css */
+
+.report-types-grid {
+    display: grid; grid-template-columns: repeat(5, 1fr);
+    gap: 12px; margin-bottom: 24px;
+}
+
+.report-type-card {
+    text-align: center; cursor: pointer;
+    padding: 20px 12px; transition: all 0.3s;
+}
+
+.report-type-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent-primary);
+}
+
+.report-type-icon { font-size: 28px; display: block; margin-bottom: 8px; }
+
+.report-type-card h3 { font-size: 13px; font-weight: 600; margin-bottom: 4px; }
+.report-type-card p { font-size: 11px; color: var(--text-muted); }
+
+.reports-layout {
+    display: grid; grid-template-columns: 350px 1fr; gap: 24px;
+}
+
+.reports-list { display: flex; flex-direction: column; gap: 8px; }
+
+.report-list-item-card {
+    padding: 14px; border-radius: var(--radius-md);
+    border: 1px solid var(--border-subtle); cursor: pointer;
+    transition: all 0.2s;
+}
+
+.report-list-item-card:hover { border-color: var(--border-medium); }
+.report-list-item-card.active {
+    border-color: var(--accent-primary);
+    background: var(--accent-glow);
+}
+
+.rli-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 6px; }
+.rli-header strong { font-size: 13px; }
+.rli-summary { font-size: 12px; color: var(--text-muted); line-height: 1.4; margin-bottom: 4px; }
+.rli-date { font-size: 11px; color: var(--text-muted); }
+
+.reports-detail-card { min-height: 400px; }
+
+.report-section { margin-bottom: 24px; }
+.report-section h4 {
+    font-size: 14px; font-weight: 600; color: var(--accent-primary);
+    text-transform: capitalize; margin-bottom: 12px;
+    padding-bottom: 8px; border-bottom: 1px solid var(--border-subtle);
+}
+
+.report-kv-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+
+.report-kv {
+    display: flex; flex-direction: column; gap: 4px; padding: 8px 0;
+}
+
+.report-kv-label { font-size: 12px; color: var(--text-muted); text-transform: capitalize; }
+.report-kv-value { font-size: 15px; font-weight: 600; }
+
+.report-list-item { font-size: 14px; color: var(--text-secondary); padding: 4px 0; }
+
+@media (max-width: 1100px) {
+    .report-types-grid { grid-template-columns: repeat(3, 1fr); }
+    .reports-layout { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+    .report-types-grid { grid-template-columns: repeat(2, 1fr); }
+    .report-kv-grid { grid-template-columns: 1fr; }
+}

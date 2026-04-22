@@ -1,0 +1,54 @@
+/* NepseAnalytics.css */
+
+.nepse-summary-grid { margin-bottom: 24px; }
+
+.nepse-stat-card {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.nepse-chart-card { margin-bottom: 24px; }
+
+.chart-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.period-tabs {
+    display: flex;
+    gap: 4px;
+    background: var(--bg-primary);
+    border-radius: 10px;
+    padding: 4px;
+}
+
+.period-tab {
+    padding: 6px 16px;
+    border: none;
+    background: transparent;
+    color: var(--text-secondary);
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.2s;
+    font-family: 'Inter', sans-serif;
+}
+
+.period-tab:hover { color: var(--text-primary); }
+
+.period-tab.active {
+    background: var(--accent-gradient);
+    color: white;
+    box-shadow: 0 2px 8px var(--accent-glow);
+}
+
+.nepse-canvas {
+    border-radius: var(--radius-md);
+    display: block;
+}
